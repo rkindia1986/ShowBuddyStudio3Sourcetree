@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_main_sender"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5sp"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/lin1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/sender_background"
+        android:padding="2dp">
+
+        <TextView
+            android:id="@+id/txt_sender_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:lineSpacingExtra="3dp"
+            android:maxWidth="270sp"
+            android:minWidth="100sp"
+            android:padding="8dp"
+            android:text="Do you need help dsadsad sad sadsadsadsadsadsadsadsadasdsadasdasdadsadsadas ddadasdsadsadsad dsad d asd sad sad sada sd ada dadasdsadasdasdsadsadsadsadsadsadsadasdsadsadadsadsadad d dasdasdsadasda d asdasdasdsadsadasdsadsadasdsadsadsadsadsadasdsadsadasdasdadada dasd asdas dasd d asd asd asd as dsa d sad sa dsa dsa d asd asd as"
+            android:textColor="#fff" />
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/txt_sender_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/lin1"
+        android:layout_marginEnd="15sp"
+        android:layout_marginTop="5sp"
+        android:maxWidth="270sp"
+        android:padding="2sp"
+        android:text="seen at 02:55 PM"
+        android:textColor="#D6D6D6" />
+
+</RelativeLayout>

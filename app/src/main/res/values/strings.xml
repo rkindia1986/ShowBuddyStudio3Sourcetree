@@ -1,0 +1,88 @@
+<resources>
+    <string name="app_name">ShowBuddy</string>
+    <string name="log_in_with_facebook">Log in with facebook</string>
+
+
+    <!--
+
+    NEEL MEVADA
+    <string name="facebook_app_id">1830871490544656</string>
+    <string name="fb_login_protocol_scheme">fb1830871490544656</string>
+
+    -->
+
+    <!--<string name="facebook_app_id">198103807460276</string>-->
+    <!--<string name="fb_login_protocol_scheme">fb198103807460276</string>-->
+
+    <string name="facebook_app_id">587553988256077</string>
+    <string name="fb_login_protocol_scheme">fb587553988256077</string>
+
+
+    <string name="fb_note">We don\'t post anything to Facebook.</string>
+    <string name="terms">By signing in, you agree with our <a href="https://www.google.com"><font color="#A9A9A9">Terms of Service</font></a> and <a href="https://www.google.com"><font color="#A9A9A9">Privacy Policy</font></a></string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--Preference Strings-->
+    <string name="pref_fb_id">facebook_id</string>
+    <string name="pref_email_id">email_id</string>
+    <string name="pref_first_name">first_name</string>
+    <string name="pref_last_name">last_name</string>
+    <string name="pref_gender">gender</string>
+    <string name="pref_birthday">birthday</string>
+    <string name="pref_location">location</string>
+    <string name="pref_profile_photo">profile_photo</string>
+    <string name="pref_fb_profile_photo2">fb_profile_photo2</string>
+    <string name="pref_fb_profile_photo3">fb_profile_photo3</string>
+    <string name="pref_fb_profile_photo4">fb_profile_photo4</string>
+    <string name="pref_fb_profile_photo5">fb_profile_photo5</string>
+    <string name="pref_fb_profile_photo6">fb_profile_photo6</string>
+    <string name="pref_college_name">college_name</string>
+    <string name="pref_relationship_status">relationship_status</string>
+
+    <string name="pref_filter_single_man">relationship_filter_single_man</string>
+    <string name="pref_filter_single_woman">relationship_filter_single_woman</string>
+    <string name="pref_about">about</string>
+    <string name="pref_age">age</string>
+    <string name="pref_profession">profession</string>
+    <string name="qbuserid">qbuserid</string>
+    <string name="qbuserlogin">qbuserid</string>
+    <string name="qbpass">qbpass</string>
+    <string name="splashimagelogo">SplashImageLogo</string>
+    <string name="edit_info">Edit Info</string>
+    <string name="settings">Settings</string>
+    <string name="my_showbuddy_plus">My Showbuddy Plus</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="about_you">About You</string>
+    <string name="current_work">Current Work</string>
+    <string name="school">School</string>
+    <string name="gender">Gender</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="maritialstatus">Maritial Status</string>
+    <string name="couple">Couple</string>
+    <string name="action_search">Search</string>
+    <string name="married">Married</string>
+    <string name="unmarried">UnMarried</string>
+    <string name="show_my_instagram_photos">Show my Instagram Photos</string>
+    <string name="connect_instagram">Connect Instagram</string>
+    <string name="done">Done</string>
+    <string name="googleapikey">AIzaSyCmryJxAzJu1qHfzVwnNCqhtDKely7dQj0</string>
+
+    <string name="below_age_range">ShowBuddy uses these preferences to suggest matches. Some match suggetions may not fall within your desired parameter.</string>
+    <string name="below_showme_ontindr">You won\'t show up in the card stack but can still message your existing matches.</string>
+<array name="genderarry">
+    <item>Male</item>
+    <item>Female</item>
+    <!--<item>Couple</item>-->
+</array>
+
+    <array name="relationshipstatus">
+        <item>Single</item>
+        <item>Taken</item>
+    </array>
+</resources>

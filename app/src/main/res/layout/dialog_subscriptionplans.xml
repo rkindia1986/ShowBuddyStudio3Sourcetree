@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary">
+
+
+        <LinearLayout
+            android:id="@+id/firstsubscriptionplans"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/dime10dp"
+            >
+
+            <TextView
+                android:id="@+id/txtgetshowbuddyplusplans"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Choose Subscription Options"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginTop="@dimen/dimen10dp"/>
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fabsubscriptionplanspurchase"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/white"
+                android:src="@drawable/ic_star"
+                android:tint="#24A2F8"
+                app:borderWidth="0dp"
+                app:fabSize="auto"
+                android:layout_marginTop="@dimen/dimen12dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dime10dp"
+                android:gravity="center"
+                android:text="Different Subscription Plans"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:textSize="18sp"/>
+
+        </LinearLayout>
+
+
+
+
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/subscriptionplans"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/firstsubscriptionplans"
+        android:weightSum="3.0">
+
+
+        <LinearLayout
+            android:id="@+id/linear_firstsubscriptionpplan"
+            android:layout_width="0sp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1.0"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="@dimen/activity_vertical_margin"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="month"
+                android:textSize="18sp"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dimen10dp"/>
+
+            <TextView
+                android:id="@+id/txtamountsubscriptionplan1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="$14.99"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dimen10dp"
+                android:layout_marginBottom="@dimen/dime25dp"/>
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linear_secondsubscriptionplan"
+            android:layout_width="0sp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1.0">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="6"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="@dimen/activity_vertical_margin"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="months"
+                android:textSize="18sp"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dimen10dp"/>
+
+            <TextView
+                android:id="@+id/txtamountsubscriptionplan2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="$89.99"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dimen10dp"
+                android:layout_marginBottom="@dimen/dime25dp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linear_thirdsubscriptionplan"
+            android:layout_width="0sp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1.0">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="12"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="@dimen/activity_vertical_margin"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="months"
+                android:textSize="18sp"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dimen10dp"/>
+
+            <TextView
+                android:id="@+id/txtamountsubscriptionplan3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="$179.99"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dimen10dp"
+                android:layout_marginBottom="@dimen/dime25dp"/>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnsubscriptioncontinue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Continue"
+        android:background="@color/colorPrimary"
+        android:textSize="18sp"
+        android:textColor="#ffffff"
+        android:layout_gravity="center_horizontal"
+        android:padding="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        />
+
+
+</LinearLayout>

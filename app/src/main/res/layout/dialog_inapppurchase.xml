@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimary">
+
+
+    <LinearLayout
+        android:id="@+id/powerswipes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/dime10dp"
+        >
+
+        <TextView
+            android:id="@+id/txtgetshowbuddyplus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choose Power Swipe Plans"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_marginTop="@dimen/dimen10dp"/>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fabpurchase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/white"
+            android:src="@drawable/ic_star"
+            android:tint="#24A2F8"
+            app:borderWidth="0dp"
+            app:fabSize="auto"
+            android:layout_marginTop="@dimen/dimen12dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dime10dp"
+            android:gravity="center"
+            android:text="Out of Power Swipes Likes"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:textSize="18sp"/>
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>
+    <LinearLayout
+        android:id="@+id/subscriptionplans"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/powerswipes"
+        android:weightSum="3.0">
+
+
+        <LinearLayout
+            android:id="@+id/linear_firstsubscription"
+            android:layout_width="0sp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1.0"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="5"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="@dimen/activity_vertical_margin"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Power Swipes"
+                android:textSize="18sp"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dimen10dp"/>
+
+            <TextView
+                android:id="@+id/txtamountsubscription1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="$4.99"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dimen10dp"
+                android:layout_marginBottom="@dimen/dime25dp"/>
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linear_secondsubscription"
+            android:layout_width="0sp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1.0">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="10"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="@dimen/activity_vertical_margin"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Power Swipes"
+                android:textSize="18sp"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dimen10dp"/>
+
+            <TextView
+                android:id="@+id/txtamountsubscription2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="$9.99"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dimen10dp"
+                android:layout_marginBottom="@dimen/dime25dp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linear_thirdsubscription"
+            android:layout_width="0sp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1.0">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="15"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="@dimen/activity_vertical_margin"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Power Swipes"
+                android:textSize="18sp"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dimen10dp"/>
+
+            <TextView
+                android:id="@+id/txtamountsubscription3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="$14.99"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dimen10dp"
+                android:layout_marginBottom="@dimen/dime25dp"/>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btncontinue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Continue"
+        android:background="@color/colorPrimary"
+        android:textSize="18sp"
+        android:textColor="#ffffff"
+        android:layout_gravity="center_horizontal"
+        android:padding="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        />
+
+
+</LinearLayout>

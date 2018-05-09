@@ -1,0 +1,51 @@
+0 = {SubscriptionInfo@5881} "{id=3, iccId=899123000XXXXXXXXXXX simSlotIndex=0 displayName=Idea carrierName=Idea nameSource=0 iconTint=-16746133 dataRoaming=1 iconBitmap=android.graphics.Bitmap@148d6b8 mcc 404 mnc 24 SimProvisioningStatus 0 mStatus=0 mNwMode=-1}"
+1 = {SubscriptionInfo@5882} "{id=2, iccId=899198160XXXXXXXXXXX simSlotIndex=1 displayName=airtel carrierName=airtel nameSource=0 iconTint=-13408298 dataRoaming=0 iconBitmap=android.graphics.Bitmap@c56d7f6 mcc 404 mnc 98 SimProvisioningStatus 0 mStatus=0 mNwMode=-1}"
+
+
+
+03-21 16:55:04.059 31361-32463/com.smsforward E/getSubscriptionId: getSubscriptionId:1
+03-21 16:55:04.059 31361-32463/com.smsforward E/getSimSlotIndex: getSimSlotIndex:0
+03-21 16:55:04.495 31361-32463/com.smsforward E/getSubscriptionId: getSubscriptionId:2
+03-21 16:55:04.496 31361-32463/com.smsforward E/getSimSlotIndex: getSimSlotIndex:1
+
+
+
+NEL MOBILE:
+[{"mCarrierName":"Jio 4G","mCountryIso":"","mDataRoaming":0,"mDisplayName":"Jio 4G 01","mIccId":"89918570400071783012","mIconBitmap":{"mDensity":480,"mFinalizer":{"mNativeAllocationByteCount":20736,"mNativeBitmap":546550937856},"mHeight":72,"mIsMutable":false,"mNativePtr":546550937856,"mRecycled":false,"mRequestPremultiplied":true,"mWidth":72},"mIconTint":-16725934,"mId":1,"mMcc":405,"mMnc":30,"mNameSource":2,"mNumber":"","mSimSlotIndex":0},{"mCarrierName":"Tata — TATA DOCOMO","mCountryIso":"","mDataRoaming":0,"mDisplayName":"TATA DOCOMO 02","mIccId":"89910301610128689300","mIconBitmap":{"mDensity":480,"mFinalizer":{"mNativeAllocationByteCount":20736,"mNativeBitmap":546550937952},"mHeight":72,"mIsMutable":false,"mNativePtr":546550937952,"mRecycled":false,"mRequestPremultiplied":true,"mWidth":72},"mIconTint":-16611119,"mId":2,"mMcc":405,"mMnc":30,"mNameSource":2,"mNumber":"","mSimSlotIndex":1}]
+
+KHEMSINGH MOBILE:
+
+Gson gson = new Gson();
+JSONArray singleArray = new JSONArray(gson.toJson(subscriptionInfoList));
+singleArray.getJSONObject(1).optString("mId")
+
+
+
+==========================
+
+
+  try {
+            SubscriptionManager subscriptionManager = SubscriptionManager.from(context.getApplicationContext());
+            List<SubscriptionInfo> subscriptionInfoList = subscriptionManager.getActiveSubscriptionInfoList();
+
+            Gson gson = new Gson();
+            JSONArray singleArray = new JSONArray(gson.toJson(subscriptionInfoList));
+            sendSubScribId = Integer.parseInt(singleArray.getJSONObject(simNumber).optString("mId"));
+
+        /*for (SubscriptionInfo subscriptionInfo : subscriptionInfoList) {
+            int subscriptionId = subscriptionInfo.getSubscriptionId();
+
+            if (subscriptionInfo.getSimSlotIndex() == simNumber) {
+                simNumber = subscriptionInfo.getSubscriptionId();
+            }
+            Gson gson = new Gson();
+            JSONArray singleArray = new JSONArray(gson.toJson(subscriptionInfoList));
+//                    Log.e("getSubscriptionId", "getSubscriptionId:" + subscriptionInfo.getSubscriptionId());
+//                    Log.e("getSimSlotIndex", "getSimSlotIndex:" + subscriptionInfo.getSimSlotIndex());
+
+        }*/
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        

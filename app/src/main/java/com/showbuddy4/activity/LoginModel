@@ -1,0 +1,526 @@
+package com.showbuddy2.model;
+
+import com.google.gson.annotations.SerializedName;
+
+/**
+ * Created by Jainam on 14-12-2017.
+ */
+
+public class LoginModel {
+
+
+    /**
+     * 0 : 33
+     * id : 33
+     * 1 : 1819439164766963
+     * FbProfileId : 1819439164766963
+     * 2 : https://graph.facebook.com/1819439164766963/picture?width=200&height=150
+     * FbUserPhotoUrl1 : https://graph.facebook.com/1819439164766963/picture?width=200&height=150
+     * 3 : https://scontent.xx.fbcdn.net/v/t31.0-8/27024269_1814363905274489_3430722044922351369_o.jpg?oh=70fad410d1f483476fce528a9d21171a&oe=5AE482D6
+     * FbUserPhotoUrl2 : https://scontent.xx.fbcdn.net/v/t31.0-8/27024269_1814363905274489_3430722044922351369_o.jpg?oh=70fad410d1f483476fce528a9d21171a&oe=5AE482D6
+     * 4 : https://scontent.xx.fbcdn.net/v/t31.0-8/16602348_1449960335048183_8026996505684045287_o.jpg?oh=408f36f30b4e13e47b6ee7b0efb5264f&oe=5AE5A7F9
+     * FbUserPhotoUrl3 : https://scontent.xx.fbcdn.net/v/t31.0-8/16602348_1449960335048183_8026996505684045287_o.jpg?oh=408f36f30b4e13e47b6ee7b0efb5264f&oe=5AE5A7F9
+     * 5 : https://scontent.xx.fbcdn.net/v/t31.0-8/16112724_1421304954580388_444645602774093868_o.jpg?oh=5d6037e68558348ddd9b948de7a5c38e&oe=5B182B19
+     * FbUserPhotoUrl4 : https://scontent.xx.fbcdn.net/v/t31.0-8/16112724_1421304954580388_444645602774093868_o.jpg?oh=5d6037e68558348ddd9b948de7a5c38e&oe=5B182B19
+     * 6 : https://scontent.xx.fbcdn.net/v/t31.0-8/15137666_1345934098784141_7757768410582607678_o.jpg?oh=47fbc571d20ac3a8335dd13ead659805&oe=5ADF4420
+     * FbUserPhotoUrl5 : https://scontent.xx.fbcdn.net/v/t31.0-8/15137666_1345934098784141_7757768410582607678_o.jpg?oh=47fbc571d20ac3a8335dd13ead659805&oe=5ADF4420
+     * 7 : https://scontent.xx.fbcdn.net/v/t31.0-8/14612384_1296944360349782_202107573588352512_o.jpg?oh=e345c60365a261d6f74d05d50297959d&oe=5AE4270C
+     * FbUserPhotoUrl6 : https://scontent.xx.fbcdn.net/v/t31.0-8/14612384_1296944360349782_202107573588352512_o.jpg?oh=e345c60365a261d6f74d05d50297959d&oe=5AE4270C
+     * 8 : Neel Mevada
+     * ProfileName : Neel Mevada
+     * 9 : neelmevada@ymail.com
+     * UserEmail : neelmevada@ymail.com
+     * 10 :
+     * UserAddress :
+     * 11 :
+     * UserDob :
+     * 12 : Neel
+     * FirstName : Neel
+     * 13 : Mevada
+     * LastName : Mevada
+     * 14 :
+     * CollegeName :
+     * 15 : Male
+     * Gender : Male
+     * 16 :
+     * About :
+     * 17 : 2018-02-03 05:54:19
+     * created_date : 2018-02-03 05:54:19
+     * 18 : 0
+     * Age : 0
+     * 19 :
+     * Profession :
+     * 20 : 23.0535496,72.5327365
+     * Location : 23.0535496,72.5327365
+     * status : 1
+     * msg : Login Successfully
+     * away : 5110.3849155948
+     * distin : null
+     */
+
+    @SerializedName("0")
+    private String _$0;
+    private String id;
+    @SerializedName("1")
+    private String _$1;
+    private String FbProfileId;
+    @SerializedName("2")
+    private String _$2;
+    private String FbUserPhotoUrl1;
+    @SerializedName("3")
+    private String _$3;
+    private String FbUserPhotoUrl2;
+    @SerializedName("4")
+    private String _$4;
+    private String FbUserPhotoUrl3;
+    @SerializedName("5")
+    private String _$5;
+    private String FbUserPhotoUrl4;
+    @SerializedName("6")
+    private String _$6;
+    private String FbUserPhotoUrl5;
+    @SerializedName("7")
+    private String _$7;
+    private String FbUserPhotoUrl6;
+    @SerializedName("8")
+    private String _$8;
+    private String ProfileName;
+    @SerializedName("9")
+    private String _$9;
+    private String UserEmail;
+    @SerializedName("10")
+    private String _$10;
+    private String UserAddress;
+    @SerializedName("11")
+    private String _$11;
+    private String UserDob;
+    @SerializedName("12")
+    private String _$12;
+    private String FirstName;
+    @SerializedName("13")
+    private String _$13;
+    private String LastName;
+    @SerializedName("14")
+    private String _$14;
+    private String CollegeName;
+    @SerializedName("15")
+    private String _$15;
+    private String Gender;
+    @SerializedName("16")
+    private String _$16;
+    private String About;
+    @SerializedName("17")
+    private String _$17;
+    private String created_date;
+    @SerializedName("18")
+    private String _$18;
+    private String Age;
+    @SerializedName("19")
+    private String _$19;
+    private String Profession;
+    @SerializedName("20")
+    private String _$20;
+    private String Location;
+    private String status;
+    private String msg;
+    private double away;
+    private Object distin;
+    private String qbuserid;
+    private String qbuserlogin;
+    private String qbpass;
+
+
+
+    public String get_$0() {
+        return _$0;
+    }
+
+    public void set_$0(String _$0) {
+        this._$0 = _$0;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String get_$1() {
+        return _$1;
+    }
+
+    public void set_$1(String _$1) {
+        this._$1 = _$1;
+    }
+
+    public String getFbProfileId() {
+        return FbProfileId;
+    }
+
+    public void setFbProfileId(String FbProfileId) {
+        this.FbProfileId = FbProfileId;
+    }
+
+    public String get_$2() {
+        return _$2;
+    }
+
+    public void set_$2(String _$2) {
+        this._$2 = _$2;
+    }
+
+    public String getFbUserPhotoUrl1() {
+        return FbUserPhotoUrl1;
+    }
+
+    public void setFbUserPhotoUrl1(String FbUserPhotoUrl1) {
+        this.FbUserPhotoUrl1 = FbUserPhotoUrl1;
+    }
+
+    public String get_$3() {
+        return _$3;
+    }
+
+    public void set_$3(String _$3) {
+        this._$3 = _$3;
+    }
+
+    public String getFbUserPhotoUrl2() {
+        return FbUserPhotoUrl2;
+    }
+
+    public void setFbUserPhotoUrl2(String FbUserPhotoUrl2) {
+        this.FbUserPhotoUrl2 = FbUserPhotoUrl2;
+    }
+
+    public String get_$4() {
+        return _$4;
+    }
+
+    public void set_$4(String _$4) {
+        this._$4 = _$4;
+    }
+
+    public String getFbUserPhotoUrl3() {
+        return FbUserPhotoUrl3;
+    }
+
+    public void setFbUserPhotoUrl3(String FbUserPhotoUrl3) {
+        this.FbUserPhotoUrl3 = FbUserPhotoUrl3;
+    }
+
+    public String get_$5() {
+        return _$5;
+    }
+
+    public void set_$5(String _$5) {
+        this._$5 = _$5;
+    }
+
+    public String getFbUserPhotoUrl4() {
+        return FbUserPhotoUrl4;
+    }
+
+    public void setFbUserPhotoUrl4(String FbUserPhotoUrl4) {
+        this.FbUserPhotoUrl4 = FbUserPhotoUrl4;
+    }
+
+    public String get_$6() {
+        return _$6;
+    }
+
+    public void set_$6(String _$6) {
+        this._$6 = _$6;
+    }
+
+    public String getFbUserPhotoUrl5() {
+        return FbUserPhotoUrl5;
+    }
+
+    public void setFbUserPhotoUrl5(String FbUserPhotoUrl5) {
+        this.FbUserPhotoUrl5 = FbUserPhotoUrl5;
+    }
+
+    public String get_$7() {
+        return _$7;
+    }
+
+    public void set_$7(String _$7) {
+        this._$7 = _$7;
+    }
+
+    public String getFbUserPhotoUrl6() {
+        return FbUserPhotoUrl6;
+    }
+
+    public void setFbUserPhotoUrl6(String FbUserPhotoUrl6) {
+        this.FbUserPhotoUrl6 = FbUserPhotoUrl6;
+    }
+
+    public String get_$8() {
+        return _$8;
+    }
+
+    public void set_$8(String _$8) {
+        this._$8 = _$8;
+    }
+
+    public String getProfileName() {
+        return ProfileName;
+    }
+
+    public void setProfileName(String ProfileName) {
+        this.ProfileName = ProfileName;
+    }
+
+    public String get_$9() {
+        return _$9;
+    }
+
+    public void set_$9(String _$9) {
+        this._$9 = _$9;
+    }
+
+    public String getUserEmail() {
+        return UserEmail;
+    }
+
+    public void setUserEmail(String UserEmail) {
+        this.UserEmail = UserEmail;
+    }
+
+    public String get_$10() {
+        return _$10;
+    }
+
+    public void set_$10(String _$10) {
+        this._$10 = _$10;
+    }
+
+    public String getUserAddress() {
+        return UserAddress;
+    }
+
+    public void setUserAddress(String UserAddress) {
+        this.UserAddress = UserAddress;
+    }
+
+    public String get_$11() {
+        return _$11;
+    }
+
+    public void set_$11(String _$11) {
+        this._$11 = _$11;
+    }
+
+    public String getUserDob() {
+        return UserDob;
+    }
+
+    public void setUserDob(String UserDob) {
+        this.UserDob = UserDob;
+    }
+
+    public String get_$12() {
+        return _$12;
+    }
+
+    public void set_$12(String _$12) {
+        this._$12 = _$12;
+    }
+
+    public String getFirstName() {
+        return FirstName;
+    }
+
+    public void setFirstName(String FirstName) {
+        this.FirstName = FirstName;
+    }
+
+    public String get_$13() {
+        return _$13;
+    }
+
+    public void set_$13(String _$13) {
+        this._$13 = _$13;
+    }
+
+    public String getLastName() {
+        return LastName;
+    }
+
+    public void setLastName(String LastName) {
+        this.LastName = LastName;
+    }
+
+    public String get_$14() {
+        return _$14;
+    }
+
+    public void set_$14(String _$14) {
+        this._$14 = _$14;
+    }
+
+    public String getCollegeName() {
+        return CollegeName;
+    }
+
+    public void setCollegeName(String CollegeName) {
+        this.CollegeName = CollegeName;
+    }
+
+    public String get_$15() {
+        return _$15;
+    }
+
+    public void set_$15(String _$15) {
+        this._$15 = _$15;
+    }
+
+    public String getGender() {
+        return Gender;
+    }
+
+    public void setGender(String Gender) {
+        this.Gender = Gender;
+    }
+
+    public String get_$16() {
+        return _$16;
+    }
+
+    public void set_$16(String _$16) {
+        this._$16 = _$16;
+    }
+
+    public String getAbout() {
+        return About;
+    }
+
+    public void setAbout(String About) {
+        this.About = About;
+    }
+
+    public String get_$17() {
+        return _$17;
+    }
+
+    public void set_$17(String _$17) {
+        this._$17 = _$17;
+    }
+
+    public String getCreated_date() {
+        return created_date;
+    }
+
+    public void setCreated_date(String created_date) {
+        this.created_date = created_date;
+    }
+
+    public String get_$18() {
+        return _$18;
+    }
+
+    public void set_$18(String _$18) {
+        this._$18 = _$18;
+    }
+
+    public String getAge() {
+        return Age;
+    }
+
+    public void setAge(String Age) {
+        this.Age = Age;
+    }
+
+    public String get_$19() {
+        return _$19;
+    }
+
+    public void set_$19(String _$19) {
+        this._$19 = _$19;
+    }
+
+    public String getProfession() {
+        return Profession;
+    }
+
+    public void setProfession(String Profession) {
+        this.Profession = Profession;
+    }
+
+    public String get_$20() {
+        return _$20;
+    }
+
+    public void set_$20(String _$20) {
+        this._$20 = _$20;
+    }
+
+    public String getLocation() {
+        return Location;
+    }
+
+    public void setLocation(String Location) {
+        this.Location = Location;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public String getMsg() {
+        return msg;
+    }
+
+    public void setMsg(String msg) {
+        this.msg = msg;
+    }
+
+    public double getAway() {
+        return away;
+    }
+
+    public void setAway(double away) {
+        this.away = away;
+    }
+
+    public Object getDistin() {
+        return distin;
+    }
+
+    public void setDistin(Object distin) {
+        this.distin = distin;
+    }
+
+    public String getQbuserid() {
+        return qbuserid;
+    }
+
+    public void setQbuserid(String qbuserid) {
+        this.qbuserid = qbuserid;
+    }
+
+    public String getQbuserlogin() {
+        return qbuserlogin;
+    }
+
+    public void setQbuserlogin(String qbuserlogin) {
+        this.qbuserlogin = qbuserlogin;
+    }
+
+    public String getQbpass() {
+        return qbpass;
+    }
+
+    public void setQbpass(String qbpass) {
+        this.qbpass = qbpass;
+    }
+
+}

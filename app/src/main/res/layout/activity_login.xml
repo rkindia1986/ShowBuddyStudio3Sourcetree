@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fb="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.showbuddy4.activity.LoginActivity">
+
+    <ImageView
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="50dp"
+        android:src="@drawable/showbuddy_logo" />
+
+       <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:gravity="center">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardview_login_fb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="50dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginStart="50dp"
+            app:cardCornerRadius="25dp">
+
+            <TextView
+                android:id="@+id/img_fb_photos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/com_facebook_blue"
+                android:gravity="center"
+                android:padding="15dp"
+                android:text="@string/log_in_with_facebook"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+        </android.support.v7.widget.CardView>
+
+
+        <com.facebook.login.widget.LoginButton
+            android:id="@+id/login_fb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp"
+            android:textAllCaps="true"
+            android:textSize="16sp"
+            android:visibility="gone"
+            fb:com_facebook_login_text="Sign In With Facebook"
+            fb:com_facebook_logout_text="Sign In With Facebook"
+            fb:theme="@style/Base.ThemeOverlay.AppCompat.Dialog.Alert" />
+
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginStart="50dp"
+        android:gravity="center"
+        android:text="@string/fb_note"
+        android:textColor="@color/gray_a9" />
+
+    <TextView
+        android:id="@+id/tv_terms"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginStart="50dp"
+        android:gravity="center"
+        android:text="@string/terms"
+        android:textColor="@color/gray_a9" />
+</LinearLayout>

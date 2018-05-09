@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:scrollbars="none"
+    android:background="#72cccccc"
+    tools:context="com.showbuddy4.activity.EditProfileActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:src="@drawable/left_arrow"
+                android:id="@+id/imgBack"
+                android:layout_height="wrap_content" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+
+                android:layout_height="300dp">
+
+                <ProgressBar
+                    android:id="@+id/loadingImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true" />
+
+                <ImageView
+                    android:id="@+id/img_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/userimage2" />
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txt_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:paddingBottom="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:paddingTop="10dp"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"
+                        tools:ignore="RtlHardcoded,RtlSymmetry" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingBottom="@dimen/dimen3dp"
+                        android:paddingTop="@dimen/dimen3dp">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@color/white"
+                            android:src="@drawable/ic_work" />
+
+                        <TextView
+                            android:id="@+id/workvalue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10sp"
+                            android:background="@color/white"
+                            android:text=""
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp"
+                            tools:ignore="RtlHardcoded,RtlSymmetry" />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingBottom="@dimen/dimen3dp"
+                        android:paddingTop="@dimen/dimen3dp">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@color/white"
+                            android:src="@drawable/ic_school" />
+
+                        <TextView
+                            android:id="@+id/collegeValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10sp"
+                            android:background="@color/white"
+                            android:text=""
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp"
+                            tools:ignore="RtlHardcoded,RtlSymmetry" />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingBottom="@dimen/dimen3dp"
+                        android:paddingTop="@dimen/dimen3dp">
+
+                        <ImageView
+                            android:id="@+id/txtaway"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@color/white"
+                            android:src="@drawable/ic_location_away" />
+
+                        <TextView
+                            android:id="@+id/txtawayvalue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10sp"
+                            android:background="@color/white"
+                            android:text=""
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp"
+                            tools:ignore="RtlHardcoded,RtlSymmetry" />
+
+
+                    </LinearLayout>
+
+
+                    <SeekBar
+                        android:id="@+id/seekProfileComplete"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dimen5dp"
+                        android:layout_marginTop="@dimen/dimen10dp" />
+
+                    <TextView
+                        android:id="@+id/txtProgressValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginRight="@dimen/dimen10dp"
+                        android:background="@color/white"
+                        android:gravity="right"
+                        android:text="25%"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp" />
+
+
+                    <TextView
+                        android:id="@+id/txt_about"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/gray_200"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="20dp"
+                        android:paddingStart="20dp"
+                        android:paddingTop="10dp"
+                        android:text="About"
+                        android:textColor="@android:color/black"
+                        android:textSize="17sp"
+                        tools:ignore="RtlHardcoded,RtlSymmetry" />
+
+                    <EditText
+                        android:id="@+id/edt_about"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:backgroundTint="@android:color/transparent"
+                        android:enabled="false"
+                        android:gravity="start"
+                        android:hint="@string/about_you"
+                        android:minLines="3"
+                        android:paddingLeft="20dp"
+                        android:paddingStart="20dp"
+                        android:textSize="15sp"
+                        tools:ignore="RtlHardcoded,RtlSymmetry"
+                        tools:targetApi="lollipop" />
+
+                    <TextView
+                        android:id="@+id/txt_current_work"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/gray_200"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="20dp"
+                        android:paddingStart="20dp"
+                        android:paddingTop="10dp"
+                        android:text="@string/current_work"
+                        android:textColor="@android:color/black"
+                        android:textSize="17sp"
+                        tools:ignore="RtlHardcoded,RtlSymmetry" />
+
+                    <EditText
+                        android:id="@+id/edt_current_work"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:backgroundTint="@android:color/transparent"
+                        android:enabled="false"
+                        android:gravity="start"
+                        android:hint="@string/current_work"
+                        android:paddingLeft="20dp"
+                        android:paddingStart="20dp"
+                        android:textSize="15sp"
+                        tools:ignore="RtlHardcoded,RtlSymmetry"
+                        tools:targetApi="lollipop" />
+
+                    <!--    <TextView
+                            android:id="@+id/txt_lbl_show_insta_photo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/gray_200"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="20dp"
+                            android:paddingStart="20dp"
+                            android:paddingTop="10dp"
+                            android:text="@string/show_my_instagram_photos"
+                            android:textColor="@android:color/black"
+                            android:textSize="17sp"
+                            tools:ignore="RtlHardcoded,RtlSymmetry" />
+
+                        <TextView
+                            android:id="@+id/txt_show_insta_photo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:gravity="start"
+                            android:paddingBottom="10dp"
+                            android:paddingLeft="20dp"
+                            android:paddingStart="20dp"
+                            android:paddingTop="10dp"
+                            android:text="@string/connect_instagram"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="15sp"
+                            tools:ignore="RtlHardcoded,RtlSymmetry" />
+    -->
+                    <TextView
+                        android:id="@+id/txt_school"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/gray_200"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="20dp"
+                        android:paddingStart="20dp"
+                        android:paddingTop="10dp"
+                        android:text="@string/school"
+                        android:textColor="@android:color/black"
+                        android:textSize="17sp"
+                        tools:ignore="RtlHardcoded,RtlSymmetry" />
+
+                    <EditText
+                        android:id="@+id/edt_education"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:backgroundTint="@android:color/transparent"
+                        android:enabled="false"
+                        android:gravity="start"
+                        android:hint="@string/school"
+                        android:paddingLeft="20dp"
+                        android:paddingStart="20dp"
+                        android:textSize="15sp"
+                        tools:ignore="RtlHardcoded,RtlSymmetry"
+                        tools:targetApi="lollipop" />
+
+                    <TextView
+                        android:id="@+id/txt_gender"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/gray_200"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="20dp"
+                        android:paddingStart="20dp"
+                        android:paddingTop="10dp"
+                        android:text="@string/gender"
+                        android:textColor="@android:color/black"
+                        android:textSize="17sp"
+                        tools:ignore="RtlHardcoded,RtlSymmetry" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:id="@+id/tvGender"
+                        android:background="@android:drawable/btn_dropdown"
+                        android:clickable="false"
+                        android:text="Male"
+
+                        android:layout_height="wrap_content" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:paddingStart="10dp"
+                        tools:ignore="RtlHardcoded,RtlSymmetry">
+
+                        <RadioButton
+                            android:id="@+id/rb_male"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="@string/male"
+                            android:textSize="17sp" />
+
+                        <RadioButton
+                            android:id="@+id/rb_female"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/female"
+                            android:textSize="17sp" />
+
+                        <RadioButton
+                            android:id="@+id/rb_couple"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/couple"
+                            android:textSize="17sp" />
+
+                    </RadioGroup>
+
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

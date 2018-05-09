@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+
+    <LinearLayout
+        android:id="@+id/buttonsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/activity_horizontal_margin">
+
+
+        <Button
+            android:id="@+id/btnGetPremium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen3dp"
+            android:background="@drawable/registerbutton"
+            android:text="GET PREMIUM MEMBERSHIP"
+            android:textColor="@color/white" />
+
+
+        <Button
+            android:id="@+id/btnGetPowerSwipe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen3dp"
+            android:background="@drawable/registerbutton"
+            android:text="GET POWER SWIPES"
+            android:textColor="@color/white" />
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
