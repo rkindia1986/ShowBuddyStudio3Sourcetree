@@ -21,7 +21,7 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * Created by User on 15-04-2018.
+ * Created by User on 15-04-2018. sdsdsd
  */
 
 public class DragDropAdapter extends RecyclerView.Adapter<DragDropAdapter.ViewHolder>  implements ItemTouchHelperAdapter {
