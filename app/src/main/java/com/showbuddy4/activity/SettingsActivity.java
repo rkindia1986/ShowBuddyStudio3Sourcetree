@@ -81,7 +81,7 @@ public class SettingsActivity extends AppCompatActivity implements IabBroadcastR
     LinearLayout linearlayoutprivacypolicy;
     LinearLayout linearlayouttermsofservice;
 
-    Switch showme_men,showSingleMan,showSingleWoman;
+    Switch showme_men, showSingleMan, showSingleWoman;
     Switch showme_women;
     Switch showme_couple;
 
@@ -103,9 +103,9 @@ public class SettingsActivity extends AppCompatActivity implements IabBroadcastR
     String maxDistanceFinalValue = "160";
     String minAge = "";
     String maxAge = "";
-
+double kmval=0;
     String selectedDistance = "km";
-String filterMan="",filterWoman="";
+    String filterMan = "", filterWoman = "";
     LinearLayout powerswipes;
     LinearLayout showbuddyplus;
     LinearLayout linear_firstsubscription;
@@ -282,10 +282,8 @@ String filterMan="",filterWoman="";
 
                     @Override
                     public void onProgressChanged(SeekBar seekBar, int progressValue, boolean fromUser) {
-
                         maxDistanceFinalValue = String.valueOf(progressValue);
                         maxDIstanceTv.setText(maxDistanceFinalValue + " " + finalDistanceIn.getText().toString().trim());
-
                     }
 
                     @Override
@@ -296,6 +294,7 @@ String filterMan="",filterWoman="";
                     @Override
                     public void onStopTrackingTouch(SeekBar seekBar) {
                         // Display the value in textview
+                        kmval=seekBar.getProgress();
                     }
                 });
 
@@ -334,13 +333,14 @@ String filterMan="",filterWoman="";
         distancein_mi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                selectedDistance = "mi";
+            if(!finalDistanceIn.getText().toString().equalsIgnoreCase("MI."))
+            {   selectedDistance = "mi";
                 finalDistanceIn.setText("MI.");
-                maxDIstanceTv.setText(maxDistanceFinalValue + " " + "MI.");
-
+                kmval=kmTomiles(kmval);
+                maxDIstanceTv.setText((int)Math.round(kmval) + " " + "MI.");
+                maxDistanceSeekBar.setProgress((int)Math.round(kmval));
                 distancein_mi.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
-                distancein_km.setBackgroundColor(getResources().getColor(R.color.white));
+                distancein_km.setBackgroundColor(getResources().getColor(R.color.white));}
 
             }
         });
@@ -348,12 +348,14 @@ String filterMan="",filterWoman="";
         distancein_km.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                selectedDistance = "km";
+                if(!finalDistanceIn.getText().toString().equalsIgnoreCase("KM."))
+                {     selectedDistance = "km";
                 finalDistanceIn.setText("KM.");
-                maxDIstanceTv.setText(maxDistanceFinalValue + " " + "KM.");
+                kmval=milesTokm(kmval);
+                maxDIstanceTv.setText(Math.round(kmval)+ " " + "KM.");
+                maxDistanceSeekBar.setProgress((int)Math.round(kmval));
                 distancein_km.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
-                distancein_mi.setBackgroundColor(getResources().getColor(R.color.white));
+                distancein_mi.setBackgroundColor(getResources().getColor(R.color.white));}
 
             }
         });
@@ -785,16 +787,17 @@ String filterMan="",filterWoman="";
                             String message_like = list.get(0).getMessageLike();
                             String show_dist = list.get(0).getShowDist();
                             String super_like = list.get(0).getSuperLike();
-                            String filterMen=list.get(0).getRelationshipFilterMan();
-                            String filterWoman=list.get(0).getRelationshipFilterWoman();
+                            String filterMen = list.get(0).getRelationshipFilterMan();
+                            String filterWoman = list.get(0).getRelationshipFilterWoman();
                             setFilterMen(filterMen);
                             setFilterWoman(filterWoman);
-if(filterMen!=null ||TextUtils.isEmpty(filterMen)){
-    pref.setFilterSingleMan(filterMen);
-}
-                            if(filterWoman!=null ||TextUtils.isEmpty(filterWoman)){
+                            if (filterMen != null || TextUtils.isEmpty(filterMen)) {
+                                pref.setFilterSingleMan(filterMen);
+                            }
+                            if (filterWoman != null || TextUtils.isEmpty(filterWoman)) {
                                 pref.setFilterSingleWoman(filterWoman);
-                            }                            List<String> result = Arrays.asList(agerange.split("\\s*,\\s*"));
+                            }
+                            List<String> result = Arrays.asList(agerange.split("\\s*,\\s*"));
 
                             ageRangeTV.setText(result.get(0) + " - " + result.get(1));
                             minAge = String.valueOf(result.get(0));
@@ -825,7 +828,7 @@ if(filterMen!=null ||TextUtils.isEmpty(filterMen)){
                             }
 
                             maxDistanceSeekBar.setProgress(Integer.parseInt(maxdistance));
-
+                            kmval=Integer.parseInt(maxdistance);
                             if (show_me_on_showbuddy.equalsIgnoreCase("0")) {
                                 showmeonShowbuddy.setChecked(false);
                             } else {
@@ -872,8 +875,6 @@ if(filterMen!=null ||TextUtils.isEmpty(filterMen)){
                         }
 
 
-
-
                     }
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -890,31 +891,28 @@ if(filterMen!=null ||TextUtils.isEmpty(filterMen)){
 
     private void setFilterMen(String filterMen) {
 
-    if(filterMen!=null && !TextUtils.isEmpty(filterMen)&& filterMen.equalsIgnoreCase("yes")){
-        showSingleMan.setChecked(true);
-        //pref.setFilterSingleMan("yes");
-    }
-    else if(filterMen!=null && !TextUtils.isEmpty(filterMen)&& filterMen.equalsIgnoreCase("no")){
-        showSingleMan.setChecked(false);
-    }
-    else {
-        showSingleMan.setChecked(false);
-    }
+        if (filterMen != null && !TextUtils.isEmpty(filterMen) && filterMen.equalsIgnoreCase("yes")) {
+            showSingleMan.setChecked(true);
+            //pref.setFilterSingleMan("yes");
+        } else if (filterMen != null && !TextUtils.isEmpty(filterMen) && filterMen.equalsIgnoreCase("no")) {
+            showSingleMan.setChecked(false);
+        } else {
+            showSingleMan.setChecked(false);
+        }
     }
 
 
-private void setFilterWoman(String filterWoman){
-    if(filterWoman!=null && !TextUtils.isEmpty(filterWoman)&& filterWoman.equalsIgnoreCase("yes")){
-        showSingleWoman.setChecked(true);
-        //pref.setFilterSingleMan("yes");
+    private void setFilterWoman(String filterWoman) {
+        if (filterWoman != null && !TextUtils.isEmpty(filterWoman) && filterWoman.equalsIgnoreCase("yes")) {
+            showSingleWoman.setChecked(true);
+            //pref.setFilterSingleMan("yes");
+        } else if (filterWoman != null && !TextUtils.isEmpty(filterWoman) && filterWoman.equalsIgnoreCase("no")) {
+            showSingleWoman.setChecked(false);
+        } else {
+            showSingleWoman.setChecked(false);
+        }
     }
-    else if(filterWoman!=null && !TextUtils.isEmpty(filterWoman)&& filterWoman.equalsIgnoreCase("no")){
-        showSingleWoman.setChecked(false);
-    }
-    else {
-        showSingleWoman.setChecked(false);
-    }
-}
+
     public void updateSettingsAPI() {
 
         final ProgressDialog progressDialog = new ProgressDialog(this);
@@ -981,7 +979,6 @@ private void setFilterWoman(String filterWoman){
         }
 
 
-
         ageRange = minAge + "," + maxAge;
 
         ApiService apiService =
@@ -990,7 +987,7 @@ private void setFilterWoman(String filterWoman){
         Call<GetSettingsModel> call = apiService.updateSettings(pref.getFbId(), swipingIn, showmeStr,
                 maxDistanceFinalValue, ageRange, shwOnShowbuddy,
                 new_matches_on_off, message_on_off, message_like,
-                super_like, selectedDistance,showSingleMan.isChecked()?"yes":"no",showSingleWoman.isChecked()?"yes":"no");
+                super_like, selectedDistance, showSingleMan.isChecked() ? "yes" : "no", showSingleWoman.isChecked() ? "yes" : "no");
 
         call.enqueue(new Callback<GetSettingsModel>() {
             @Override
@@ -1473,5 +1470,11 @@ private void setFilterWoman(String filterWoman){
 
     }
 
+    private double milesTokm(double distanceInMiles) {
+        return distanceInMiles * 1.60934;
+    }
 
+    private double kmTomiles(double distanceInKm) {
+        return distanceInKm * 0.621371;
+    }
 }
